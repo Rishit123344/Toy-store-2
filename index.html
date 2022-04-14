@@ -10,6 +10,23 @@
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+  <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAyEYopEqEGECi5B8iqT8A6mE1391iUT0s",
+    authDomain: "toy-store-8c744.firebaseapp.com",
+    projectId: "toy-store-8c744",
+    storageBucket: "toy-store-8c744.appspot.com",
+    messagingSenderId: "816648608097",
+    appId: "1:816648608097:web:6d3df11fce49d49ba88d20"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  </script>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -19,6 +36,7 @@
   <link rel = 'stylesheet' href = "./style.css"/>
   <script src="./js/addbuttons.js"></script>
   <script src="./js/markerhandler.js"></script>
+  <script src="./js/addMarkers.js"></script>
  
 
 </head>
@@ -28,7 +46,7 @@
   <a-scene 
     embedded vr-mode-ui="enabled: false"     
     arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;debugUIEnabled: false;"
-    gesture-detector create-buttons>
+    gesture-detector create-buttons create-markers>
 
     <!-- Camera -->
     <a-entity camera></a-entity>

@@ -17,7 +17,7 @@ AFRAME.registerComponent('markerhandler',{
         ratingbutton.addEventListener('click',function(){
             swal({
                 icon:'warning',
-                title:'Rate Dish',
+                title:'Rate Toy',
                 text:'Work In Progress'
             })
         })
